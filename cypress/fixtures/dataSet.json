@@ -1,0 +1,6 @@
+{
+  "invalidUsername": "timsmith",
+  "invalidPassword": "SuperSecret!",
+  "validUsername": "tomsmith",
+  "validPassword": "SuperSecretPassword!"
+}

@@ -1,7 +1,7 @@
 import LoginPage from './loginPage'
 import SecurePage from './securePage'
-import checkboxesPage from './checkboxesPage'
+import CheckboxesPage from './checkboxesPage'
 
 export const loginPage = new LoginPage();
 export const securePage = new SecurePage();
-export const checkboxesPage = new checkboxesPage();
+export const checkboxesPage = new CheckboxesPage();

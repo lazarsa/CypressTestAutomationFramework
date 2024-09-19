@@ -1,16 +1,19 @@
 import {loginPage, checkboxesPage} from "../../pages";
 
-
 describe('Checkboxes test', () => {
-    beforeEach(() => {
-    cy.visit('/login');
-    });
+    let LoginData
+    before(() => {
+        cy.visit('/login');
+        cy.fixture('dataSet').then((data) => {
+          LoginData = data
+        })
+      })
 
     it('Testing the checkboxes', () => {
         
         //Logging the user
-        loginPage.inputUsername('tomsmith');
-        loginPage.inputPassword('SuperSecretPassword!');
+        loginPage.inputUsername(LoginData.validUsername);
+        loginPage.inputPassword(LoginData.validPassword);
         loginPage.loginBtn();
         cy.url().should('include', '/secure');
 
