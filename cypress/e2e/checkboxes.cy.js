@@ -1,6 +1,5 @@
-import checkboxesPage from "../../pages/checkboxesPage";
-import loginPage from "../../pages/loginPage";
-import securePage from "../../pages/securePage";
+import {loginPage, checkboxesPage} from "../../pages";
+
 
 describe('Checkboxes test', () => {
     beforeEach(() => {
@@ -13,12 +12,12 @@ describe('Checkboxes test', () => {
         loginPage.inputUsername('tomsmith');
         loginPage.inputPassword('SuperSecretPassword!');
         loginPage.loginBtn();
-        securePage.elements.allertWindow().contains(/you logged into a secure area/i);
+        cy.url().should('include', '/secure');
 
         //Navigating to Checkboxes page
         cy.visit('/checkboxes');
         //Checking if we are on the Checkboxes page
-        checkboxesPage.elements.header().contains(/checkboxes/i);
+        cy.url().should('include', '/checkboxes');
 
         //Checking if checkbox2 is checked
         checkboxesPage.elements.checkbox2().should('be.checked');

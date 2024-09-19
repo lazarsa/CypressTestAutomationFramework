@@ -1,4 +1,4 @@
-class checkbox {
+class Checkbox {
 
     elements = {
         header: () => cy.get('h3'),
@@ -17,4 +17,4 @@ class checkbox {
     }
 }
 
-export default new checkbox();
+export default Checkbox;

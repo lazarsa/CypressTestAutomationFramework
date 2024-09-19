@@ -1,4 +1,4 @@
-class loginPage {
+class LoginPage {
 
     elements = {
         username: () => cy.get('#username'),
@@ -24,4 +24,4 @@ class loginPage {
     }
 }
 
-export default new loginPage();
+export default LoginPage;

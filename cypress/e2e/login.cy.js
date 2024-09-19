@@ -1,5 +1,4 @@
-import loginPage from "../../pages/loginPage";
-import securePage from "../../pages/securePage"
+import {loginPage, securePage} from "../../pages";
 
 describe('Login test', () => { 
   beforeEach(() => {
@@ -9,7 +8,7 @@ describe('Login test', () => {
   it('Testing logging into herokuapp', () => {
 
     //Checking if we are on the Login Page
-    cy.contains(/login page/i);
+    cy.url().should('include', '/login');
 
     //Checking for invalid username
     loginPage.inputUsername('tImsmith');
@@ -27,7 +26,9 @@ describe('Login test', () => {
     loginPage.inputUsername('tomsmith');
     loginPage.inputPassword('SuperSecretPassword!');
     loginPage.loginBtn();
-    securePage.elements.allertWindow().contains(/you logged into a secure area/i);
+    
+    //Checking if we are on the Secure Page(Successful Login)
+    cy.url().should('include', '/secure');
     
     //Logging out
     securePage.logoutBtn();

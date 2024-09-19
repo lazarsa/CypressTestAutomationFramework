@@ -1,6 +1,5 @@
-class securePage {
+class SecurePage {
     elements = {
-        allertWindow: () => cy.get('#flash'),
         logoutBtn: () => cy.get('.button')
     }
 
@@ -9,4 +8,4 @@ class securePage {
     }
 }
 
-export default new securePage();
+export default SecurePage;
