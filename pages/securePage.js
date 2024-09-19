@@ -9,4 +9,4 @@ class securePage {
     }
 }
 
-module.exports = new securePage();
+export default new securePage();
