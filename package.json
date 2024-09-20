@@ -3,6 +3,14 @@
     "cypress": "^13.14.2"
   },
   "scripts": {
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:chrome:headed": "cypress run --browser chrome --headed",
+    "cy:run:firefox": "cypress run --browser firefox",
+    "cy:run:firefox:headed": "cypress run --browser firefox --headed",
+    "cy:run:edge": "cypress run --browser edge",
+    "cy:run:edge:headed": "cypress run --browser edge --headed",
+    "cy:run:electron": "cypress run --browser electron",
+    "cy:run:electron:headed": "cypress run --browser electron --headed"
   }
 }
