@@ -1,4 +1,4 @@
-import {loginPage, checkboxesPage} from "../../pages";
+import {loginPage, checkboxesPage} from "../pages";
 
 describe('Checkboxes test', () => {
     let LoginData

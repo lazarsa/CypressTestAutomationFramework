@@ -1,4 +1,4 @@
-import {loginPage, securePage} from "../../pages";
+import {loginPage, securePage} from "../pages";
 
 describe('Login test', () => { 
   let LoginData
