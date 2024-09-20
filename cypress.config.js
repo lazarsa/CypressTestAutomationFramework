@@ -13,5 +13,10 @@ module.exports = defineConfig({
     runMode: 2,
     //Configuring retry attempts for 'cypress open'
     openMode: 1
+  },
+  reporter: 'junit',
+  reporterOptions: {
+    mochaFile: 'results/test-output.xml',
+    toConsole: true
   }
 });
